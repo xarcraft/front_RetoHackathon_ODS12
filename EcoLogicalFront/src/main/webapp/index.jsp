@@ -44,7 +44,7 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item">
                     
-                        <button type="submit" value="Ingresar" name="accion"class="btn nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                        <button class="btn nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                             data-bs-whatever="@mdo">Iniciar Sesion</button>                        
                     </li>
                     <li class="nav-item">
@@ -72,16 +72,17 @@
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Contraseña:</label>
                             <input type="text" class="form-control" id="recipient-name" name="txtpassword" required>
-                            <p class="mt-4 fst-italic">Si no tiene cuenta.. <a data-bs-toggle="modal" href="#exampleModal" 
-                            class="tooltip-test" title="Tooltip" role="button" data-bs-dismiss="modal">Registrese Gratis</a> </p>
+                            <p class="mt-4 fst-italic">Si no tiene cuenta.. 
+                            <a data-bs-toggle="modal" href="#exampleModal" title="Tooltip" style="color:#006400; font-weight: bold;"
+                            role="button" data-bs-dismiss="modal">Registrese Gratis
+                            </a> 
+                            </p>
                         </div>
+                        <input type="submit" name="accion" value="Ingresar" class="btn btn-primary">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                     </form>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" name="accion" value="Ingresar">Ingresar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
+               </div>
         </div>
     </div>
     <!--Modal Registro Usuario-->
