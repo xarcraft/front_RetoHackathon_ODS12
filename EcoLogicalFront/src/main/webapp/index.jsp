@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8" />
@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item">
                         <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-bs-whatever="@mdo">Registrarse Gratis</button>                        
+                        data-bs-whatever="@mdo">Registrarse Gratis</button>                        
                     </li>
                 </ul>
             </div>
@@ -129,9 +129,17 @@
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">Start Bootstrap can help you build better websites using the Bootstrap
-                        framework! Just download a theme and start customizing, no strings attached!</p>
-                    <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                    <p class="text-white-75">Bienvenido a EcoLogical</p>
+                    <p class="text-white-75"> Queremos agradecer tu interes 
+                    en este proyecto, ahora haces parte de la comunidad que esta cambiando al mundo,
+					nuestro fin se centra en concientizar a las personas en la adecuada dispocisión de los 
+					residuos sólidos.</p> 
+					<p class="text-white-75">Explora las pestañas del menú superior para conocer más y 
+					haz parte de este gran proyecto, a traves de los diferentes menus de la plataforma podras acceder 
+					a informacion que de ser puesta en practica tendra un potente impacto en el bienestar general 
+					de las actuales y nuevas generaciones, al final podras hacer parte de una comunidad activa que 
+					desea dejar en el mundo su granito de arena para hacer de este un lugar mejor.</p>
+                    <a class="btn btn-primary btn-xl" href="#about">Saber Más</a>
                 </div>
             </div>
         </div>
@@ -141,53 +149,33 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-lg-8 text-center">
-                    <h2 class="text-white mt-0">We've got what you need!</h2>
+                    <h2 class="text-white mt-0">LA REGLA DE LAS 4R!</h2>
                     <hr class="divider divider-light" />
-                    <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and
-                        running in no time! Choose one of our open source, free to download, and easy to use themes! No
-                        strings attached!</p>
-                    <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+                    <h6 class="text-white mt-0">INFORMACION GENERAL</h6>
+                    <p class="text-white-75 mb-4">La regla 4 erres consiste en la puesta en práctica de 4 
+                    principios en materia de residuos: Reducir, Reutilizar, Reciclar y Recuperar.
+					<p class="text-white-75 mb-4">En la generación de los residuos, el rol más importante 
+					lo tienen los ciudadanos, como consumidores. Cada día compramos y tiramos kilos de 
+					material que termina en los rellenos o basurales.</p>
+                    <div class="ratio ratio-16x9">
+                        <iframe src="assets/las 4Rs.mp4" title="Las 4R" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <p class="text-white-75 mb-4">Conclusion: una acción repetida 
+                    miles de veces sí crea la diferencia y el cambio.</p>
                 </div>
             </div>
         </div>
-    </section>
+    
     <!-- Services-->
-    <section class="page-section" id="services">
-        <div class="container px-4 px-lg-5">
-            <h2 class="text-center mt-0">At Your Service</h2>
+    
+        <div class="container px-lg-5 mt-5">
+            <h2 class="text-center mt-0">Las 4 R's</h2>
             <hr class="divider" />
-            <div class="row gx-4 gx-lg-5">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Sturdy Themes</h3>
-                        <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Up to Date</h3>
-                        <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Ready to Publish</h3>
-                        <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="mt-5">
-                        <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                        <h3 class="h4 mb-2">Made with Love</h3>
-                        <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
+   
     <!-- Portfolio-->
     <div id="portfolio">
         <div class="container-fluid p-0">
@@ -197,7 +185,7 @@
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.png" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Categoria</div>
-                            <div class="project-name">Reducir</div>
+                            <div class="project-name text-white-100">Reducir</div>
                         </div>
                     </a>
                 </div>
@@ -228,105 +216,9 @@
                         </div>
                     </a>
                 </div>
-
             </div>
         </div>
-    </div>
-    <!-- Call to action-->
-    <section class="page-section bg-dark text-white">
-        <div class="container px-4 px-lg-5 text-center">
-            <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-            <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-        </div>
-    </section>
-    <!-- Contact-->
-    <section class="page-section" id="contact">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-8 col-xl-6 text-center">
-                    <h2 class="mt-0">Let's Get In Touch!</h2>
-                    <hr class="divider" />
-                    <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will
-                        get back to you as soon as possible!</p>
-                </div>
-            </div>
-            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                <div class="col-lg-6">
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- * * SB Forms Contact Form * *-->
-                    <!-- * * * * * * * * * * * * * * *-->
-                    <!-- This form is pre-integrated with SB Forms.-->
-                    <!-- To make this form functional, sign up at-->
-                    <!-- https://startbootstrap.com/solution/contact-forms-->
-                    <!-- to get an API token!-->
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                        <!-- Name input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="name" type="text" placeholder="Enter your name..."
-                                data-sb-validations="required" />
-                            <label for="name">Full name</label>
-                            <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                        </div>
-                        <!-- Email address input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com"
-                                data-sb-validations="required,email" />
-                            <label for="email">Email address</label>
-                            <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                        </div>
-                        <!-- Phone number input-->
-                        <div class="form-floating mb-3">
-                            <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890"
-                                data-sb-validations="required" />
-                            <label for="phone">Phone number</label>
-                            <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
-                            </div>
-                        </div>
-                        <!-- Message input-->
-                        <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
-                                placeholder="Enter your message here..." style="height: 10rem"
-                                data-sb-validations="required"></textarea>
-                            <label for="message">Message</label>
-                            <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.
-                            </div>
-                        </div>
-                        <!-- Submit success message-->
-                        <!---->
-                        <!-- This is what your users will see when the form-->
-                        <!-- has successfully submitted-->
-                        <div class="d-none" id="submitSuccessMessage">
-                            <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                To activate this form, sign up at
-                                <br />
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                            </div>
-                        </div>
-                        <!-- Submit error message-->
-                        <!---->
-                        <!-- This is what your users will see when there is-->
-                        <!-- an error submitting the form-->
-                        <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
-                        </div>
-                        <!-- Submit Button-->
-                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
-                                type="submit">Submit</button></div>
-                    </form>
-                </div>
-            </div>
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                    <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                    <div>+1 (555) 123-4567</div>
-                </div>
-            </div>
-        </div>
-        
-    </section>
+    </div>    
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
