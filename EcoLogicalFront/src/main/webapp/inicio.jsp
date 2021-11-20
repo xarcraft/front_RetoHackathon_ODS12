@@ -44,7 +44,7 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item">
                     
-                        <a class="nav-link" href="#">Mi perfil</a>                        
+                        <a class="nav-link" href="perfil.jsp">Mi perfil</a>                        
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.jsp">Cerrar sesion</a>                      
@@ -93,10 +93,9 @@
 					 <p class="text-white-75 mb-4">Conclusion: Una acción repetida 
                     miles de veces sí crea la diferencia y el cambio.</p>
                     <div class="ratio ratio-16x9">
-                        <iframe src="assets/las 4Rs.mp4" title="Las 4R" 
-                        frameborder="0" allow="accelerometer; clipboard-write; 
-                        encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                        </iframe>
+                        <video width="320" height="240" controls>
+							<source src="assets/las 4Rs.mp4" type="video/mp4">
+						</video>
                     </div>
                    
                 </div>

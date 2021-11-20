@@ -35,7 +35,7 @@
     <header class="masthead">
 
         <a class="btn botonEco btn-lg" href="index.jsp" role="button">Volver</a>
-        <a class="btn botonEco btn-lg" href="#" role="button" style="float: right;">Siguiente R</a>
+        <a class="btn botonEco btn-lg" href="reutilizar.jsp" role="button" style="float: right;">Siguiente R</a>
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-8 align-self-end">
