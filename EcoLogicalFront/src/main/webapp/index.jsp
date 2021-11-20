@@ -10,7 +10,7 @@
     <meta name="author" content="" />
     <title>EcoLogical</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/R1f.png" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon_ecologicalE.svg" />
     <!-- Bootstrap Icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->
