@@ -74,7 +74,7 @@
                         </li>
                     </ul>
                 </div>
-                <a href="https://es.greenpeace.org/es/">
+                <a href="https://es.greenpeace.org/es/" target="_blank">
                     <p style="float: right; color: white">fuente GreenPeace</p>
                 </a>
             </div>
