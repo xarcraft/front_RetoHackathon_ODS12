@@ -4229,6 +4229,7 @@ textarea.form-control-lg {
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
+    color: white !important;
   }
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
@@ -4239,10 +4240,12 @@ textarea.form-control-lg {
   }
   .navbar-expand-lg .navbar-nav-scroll {
     overflow: visible;
+    color: white !important;
   }
   .navbar-expand-lg .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    padding-top: 10px !important;
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;
@@ -11447,6 +11450,12 @@ header.masthead h1, header.masthead .h1 {
 .modal-fullscreen {
   background: black;
 }
-iframe{
-    overflow:hidden;
+
+.modal-content {
+  background-color: CCFF33 !important;
 }
+
+
+
+
+
