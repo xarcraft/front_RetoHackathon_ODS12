@@ -208,7 +208,7 @@
 						miles de veces sí crea la diferencia y el cambio.</p>
 					<div class="ratio ratio-16x9">
 						<iframe src="assets/las 4Rs.mp4" title="Las 4R" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; 
+							allow="accelerometer; clipboard-write; 
                         encrypted-media; gyroscope; picture-in-picture"
 							allowfullscreen> </iframe>
 					</div>

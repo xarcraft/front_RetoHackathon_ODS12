@@ -52,80 +52,7 @@
                 </ul>
             </div>
         </div>
-    </nav>
-    <!--Modal Login-->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title fs-4" id="staticBackdropLabel">Iniciar Sesión</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="form-sign" method="get" action="./Servlet">
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Usuario:</label>
-                            <input type="text" class="form-control" id="recipient-name" name="txtusuario" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Contraseña:</label>
-                            <input type="text" class="form-control" id="recipient-name" name="txtpassword" required>
-                            <p class="mt-4 fst-italic">Si no tiene cuenta.. 
-                            <a data-bs-toggle="modal" href="#exampleModal" title="Tooltip" style="color:#006400; font-weight: bold;"
-                            role="button" data-bs-dismiss="modal">Registrese Gratis
-                            
-                            </a> 
-                            </p>
-                        </div>
-                        <input type="submit" name="accion" value="Ingresar" class="btn btn-primary">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </form>
-                </div>
-               </div>
-        </div>
-    </div>
-    <!--Modal Registro Usuario-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title text-center" id="exampleModalLabel">Registro Usuario</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <form method="get" action="Controlador">
-                <div class="mb-3">
-                	<input type="hidden" name="menu" value="Usuarios"> 
-					<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}">                  
-                  	<label for="message-text" class="col-form-label">Nombre:</label>
-                  	<input type="text" class="form-control" id="recipient-name" name="txtnombre"
-                  	value="${usuarioSeleccionado.getNombre()}" minlength="4" maxlength="30" required>
-                </div>
-                <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Email:</label>
-                    <input type="email" class="form-control" id="recipient-name" name="txtemail"
-                    value="${usuarioSeleccionado.getEmail()}" required>
-                </div>
-                <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Usuario:</label>
-                    <input type="text" class="form-control" id="recipient-name" name="txtusuario"
-                    value="${usuarioSeleccionado.getUsuario()}" minlength="4" maxlength="14" required>
-                </div>
-                <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Contraseña:</label>
-                    <input type="password" class="form-control" id="recipient-name" name="txtpassword"
-                    value="${usuarioSeleccionado.getPassword()}" minlength="4" maxlength="14" required>
-                    <input type="submit" class="btn btn-primary" name="accion" value="Registrar">
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" name="accion" value="Agregar">Registrarse</button>
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    </nav>   
     <!-- Masthead-->
     <header class="masthead">
         <div class="container px-4 px-lg-5 h-100">
@@ -167,7 +94,7 @@
                     miles de veces sí crea la diferencia y el cambio.</p>
                     <div class="ratio ratio-16x9">
                         <iframe src="assets/las 4Rs.mp4" title="Las 4R" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                        frameborder="0" allow="accelerometer; clipboard-write; 
                         encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
