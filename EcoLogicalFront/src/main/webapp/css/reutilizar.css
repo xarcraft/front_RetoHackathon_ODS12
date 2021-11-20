@@ -1,0 +1,147 @@
+@charset "ISO-8859-1";
+@charset "UTF-8";
+
+*{
+    font-family: 'Roboto', sans-serif;;
+    
+}
+
+header.masthead {
+    padding-top: 8rem;
+    padding-bottom: calc(10rem - 4.5rem);
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, 
+    rgba(92, 77, 66, 0.6) 100%), url("../assets/img/Reutilizar.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #008000 !important;
+  }
+
+.page-section {
+    padding: 6rem 0;
+  }
+
+header.masthead h1,
+header.masthead .h1 {
+    font-size: 2.25rem;
+}
+
+@media (min-width: 992px) {
+    header.masthead {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+        padding-bottom: 0;
+    }
+
+    header.masthead p {
+        font-size: 1.15rem;
+    }
+
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3rem;
+    }
+}
+
+.resaltado {
+    
+    background-color:#007200;
+    padding: 1rem 2rem;
+    color:white; 
+    font-family: 'Roboto';
+    font-size: large;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.explicacion{
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: white;
+}
+
+.explicacion2{
+    font-size: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 400;
+    color: white;
+}
+
+
+.btn-light {
+    color: #000;
+    background-color: #9EF01A;
+    border-color: #CCFF33;
+  }
+  .btn-light:hover {
+    color: #000;
+    background-color: #CCFF33;
+    border-color: #008000;
+  }
+  .btn-xl {
+    padding: 1.25rem 2.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10rem;
+  }
+
+@media (min-width: 1200px) {
+
+    header.masthead h1,
+    header.masthead .h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dropdown-divider {
+    height: 0;
+    margin: 0.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-menu-dark .dropdown-divider {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+hr.divider {
+    height: 0.2rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: #9ef01a;
+    opacity: 1;
+}
+
+hr.divider-light {
+    background-color: #fff;
+}
+
+.text-sobre{
+    color: #fff;
+    font-size: larger;
+}
+
+.botonEco{
+    background-color: #9ef01a;
+    font-size: 20;
+}
+
+.btn-lg{
+    font-size: 1.5rem;
+}
+
+.titulo3 {
+    color: 38B000 !important;
+}

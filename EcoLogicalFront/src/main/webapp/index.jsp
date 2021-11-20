@@ -53,7 +53,7 @@
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav ms-auto my-2 my-lg-0">
 					<li class="nav-item"><a class="nav-link" href="reducir.jsp">Reducir</a></li>
-					<li class="nav-item"><a class="nav-link" href="#services">Reutilizar</a></li>
+					<li class="nav-item"><a class="nav-link" href="reutilizar.jsp">Reutilizar</a></li>
 					<li class="nav-item"><a class="nav-link" href="reciclar.jsp">Reciclar</a></li>
 					<li class="nav-item"><a class="nav-link" href="recuperar.jsp">Recuperar</a></li>
 				</ul>
