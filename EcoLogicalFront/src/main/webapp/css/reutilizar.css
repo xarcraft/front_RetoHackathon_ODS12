@@ -17,6 +17,7 @@ header.masthead {
     background-size: cover;
   }
 
+
 .bg-primary {
     --bs-bg-opacity: 1;
     background-color: #008000 !important;

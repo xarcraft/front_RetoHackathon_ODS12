@@ -43,6 +43,7 @@
 <link href="css/reciclar.css" rel="stylesheet" />
 </head>
 <body id="page-top">
+
 	<!-- Masthead-->
 	<header class="masthead">
 		<a class="btn botonEco btn-lg" href="index.jsp" role="button">Volver</a>

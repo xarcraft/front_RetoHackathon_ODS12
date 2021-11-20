@@ -48,6 +48,7 @@
                       reparar objetos que ya disponemos para ofrecer una segunda vida es fundamental.</p>
                    
                 </div>
+                
             </div>
         </div>
     </header>

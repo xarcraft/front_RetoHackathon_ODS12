@@ -58,6 +58,7 @@
 					<li class="nav-item"><a class="nav-link" href="recuperar.jsp">Recuperar</a></li>
 				</ul>
 				<ul class="navbar-nav ms-auto my-2 my-lg-0">
+				
 					<li class="nav-item">
 
 						<button class="btn nav-link" data-bs-toggle="modal"
