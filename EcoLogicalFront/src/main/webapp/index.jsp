@@ -177,7 +177,7 @@
     <!-- Services-->
     
         <div class="container px-lg-5 mt-5">
-            <h2 class="text-center mt-0">Las 4 R's</h2>
+            <h2 class="text-center mt-0" style="color: white">Las 4 R's</h2>
             <hr class="divider" />
         </div>
    
@@ -225,11 +225,14 @@
         </div>
     </div>    
     <!-- Footer-->
+    
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright &copy; 2021 - EcoLogical</div>
+            <div class="small text-center text-muted">Copyright &copy; 2021 - 
+            <img src="assets/img/EcoLogicalClar1.png" width="50px"></div>
         </div>
     </footer>
+    </section>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>    
     <!-- SimpleLightbox plugin JS-->
