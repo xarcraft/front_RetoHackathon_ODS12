@@ -43,7 +43,8 @@
                 </ul>
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item">
-                        <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    
+                        <button type="submit" value="Ingresar" name="accion"class="btn nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
                             data-bs-whatever="@mdo">Iniciar Sesion</button>                        
                     </li>
                     <li class="nav-item">
