@@ -87,7 +87,7 @@ public class UsuarioJSON {
 		
 		
 		String data = "{" 
-				+"\",\"nombre\": \""+usuario.getNombre()
+				+"\"nombre\": \""+usuario.getNombre()
 				+"\",\"email\": \""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()
 				+"\",\"password\":\""+usuario.getPassword()

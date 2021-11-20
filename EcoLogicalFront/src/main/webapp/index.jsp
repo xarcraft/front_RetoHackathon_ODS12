@@ -75,6 +75,7 @@
                             <p class="mt-4 fst-italic">Si no tiene cuenta.. 
                             <a data-bs-toggle="modal" href="#exampleModal" title="Tooltip" style="color:#006400; font-weight: bold;"
                             role="button" data-bs-dismiss="modal">Registrese Gratis
+                            
                             </a> 
                             </p>
                         </div>
@@ -116,6 +117,7 @@
                     <label for="recipient-name" class="col-form-label">Contraseña:</label>
                     <input type="password" class="form-control" id="recipient-name" name="txtpassword"
                     value="${usuarioSeleccionado.getPassword()}" minlength="4" maxlength="14" required>
+                    <input type="submit" class="btn btn-primary" name="accion" value="Registrar">
                 </div>
               </form>
             </div>
