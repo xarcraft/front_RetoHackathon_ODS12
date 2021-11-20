@@ -44,12 +44,10 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item">
                     
-                        <button class="btn nav-link" data-bs-toggle="modal"
-                            data-bs-whatever="@mdo">Mi Perfil</button>                        
+                        <a class="nav-link" href="#">Mi perfil</a>                        
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="btn nav-link" data-bs-toggle="modal" 
-                        data-bs-whatever="@mdo" >Salir</button>                        
+                        <a class="nav-link" href="index.jsp">Cerrar sesion</a>                      
                     </li>
                 </ul>
             </div>
