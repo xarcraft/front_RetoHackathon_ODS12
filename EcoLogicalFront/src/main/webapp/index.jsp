@@ -24,12 +24,13 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
-
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <a class="logo">
+        	<img src="assets/EcoLogicalClar4.png" width="180">
+        </a>
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#page-top">EcoLogical</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -37,7 +38,7 @@
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link" href="reducir.jsp">Reducir</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Reutilizar</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Reciclar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reciclar.jsp">Reciclar</a></li>
                     <li class="nav-item"><a class="nav-link" href="recuperar.jsp">Recuperar</a></li>
                 </ul>
                 <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -57,25 +58,26 @@
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header bg-green">
+                <div class="modal-header">
                     <h5 class="modal-title fs-4" id="staticBackdropLabel">Iniciar Sesión</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="form-sign" method="get" action="./Servlet">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Usuario:</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="recipient-name" name="txtusuario" required>
                         </div>
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Contraseña:</label>
-                            <input type="text" class="form-control" id="recipient-name">
-                            <p class="mt-4 fst-italic">Si no tiene cuenta.. <a data-bs-toggle="modal" href="#exampleModal" class="tooltip-test" title="Tooltip" role="button" data-bs-dismiss="modal">Registrese Gratis</a> </p>
+                            <input type="text" class="form-control" id="recipient-name" name="txtpassword" required>
+                            <p class="mt-4 fst-italic">Si no tiene cuenta.. <a data-bs-toggle="modal" href="#exampleModal" 
+                            class="tooltip-test" title="Tooltip" role="button" data-bs-dismiss="modal">Registrese Gratis</a> </p>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Ingresar</button>
+                    <button type="button" class="btn btn-primary" name="accion" value="Ingresar">Ingresar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
@@ -90,31 +92,33 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form>
+              <form method="get" action="Controlador">
                 <div class="mb-3">
-                  <label for="recipient-name" class="col-form-label">Cedula:</label>
-                  <input type="number" class="form-control" id="recipient-name">
+                	<input type="hidden" name="menu" value="Usuarios"> 
+					<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}">                  
+                  	<label for="message-text" class="col-form-label">Nombre:</label>
+                  	<input type="text" class="form-control" id="recipient-name" name="txtnombre"
+                  	value="${usuarioSeleccionado.getNombre()}" minlength="4" maxlength="30" required>
                 </div>
                 <div class="mb-3">
-                  <label for="message-text" class="col-form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="recipient-name">
-                </div>
-                <div class="mb-3">
-                    <label for="recipient-name" class="col-form-label">Correo Electrónico:</label>
-                    <input type="email" class="form-control" id="recipient-name">
+                    <label for="recipient-name" class="col-form-label">Email:</label>
+                    <input type="email" class="form-control" id="recipient-name" name="txtemail"
+                    value="${usuarioSeleccionado.getEmail()}" required>
                 </div>
                 <div class="mb-3">
                     <label for="recipient-name" class="col-form-label">Usuario:</label>
-                    <input type="text" class="form-control" id="recipient-name">
+                    <input type="text" class="form-control" id="recipient-name" name="txtusuario"
+                    value="${usuarioSeleccionado.getUsuario()}" minlength="4" maxlength="14" required>
                 </div>
                 <div class="mb-3">
                     <label for="recipient-name" class="col-form-label">Contraseña:</label>
-                    <input type="password" class="form-control" id="recipient-name">
+                    <input type="password" class="form-control" id="recipient-name" name="txtpassword"
+                    value="${usuarioSeleccionado.getPassword()}" minlength="4" maxlength="14" required>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Registrarse</button>
+              <button type="button" class="btn btn-primary" name="accion" value="Agregar">Registrarse</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
             </div>
           </div>
@@ -157,14 +161,15 @@
 					<p class="text-white-75 mb-4">En la generación de los residuos, el rol más importante 
 					lo tienen los ciudadanos, como consumidores. Cada día compramos y tiramos kilos de 
 					material que termina en los rellenos o basurales.</p>
+					 <p class="text-white-75 mb-4">Conclusion: Una acción repetida 
+                    miles de veces sí crea la diferencia y el cambio.</p>
                     <div class="ratio ratio-16x9">
                         <iframe src="assets/las 4Rs.mp4" title="Las 4R" 
                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
                         encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                         </iframe>
                     </div>
-                    <p class="text-white-75 mb-4">Conclusion: una acción repetida 
-                    miles de veces sí crea la diferencia y el cambio.</p>
+                   
                 </div>
             </div>
         </div>
@@ -208,7 +213,7 @@
                     </a>
                 </div>
                 <div class="col-lg-6 col-sm-5 col-md-8">
-                    <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.png" title="Recuperar">
+                    	<a class="portfolio-box" href="assets/img/portfolio/fullsize/4.png" title="Recuperar">
                         <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.png" alt="..." />
                         <div class="portfolio-box-caption">
                             <div class="project-category text-white-50">Categoria</div>
