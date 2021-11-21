@@ -31,7 +31,7 @@ private static final long serialVersionUID = 1L;
 			if (usuario.getUsuario().equals(usua) && usuario.getPassword().equals(pass)) {
 			
 			    request.setAttribute("usuario", usuario); 
-			    request.getRequestDispatcher("/Usuario.jsp").forward(request, response); 
+			    request.getRequestDispatcher("/inicio.jsp").forward(request, response); 
 			    respuesta =1; 
 			}
 					
