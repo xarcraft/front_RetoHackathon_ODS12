@@ -35,7 +35,7 @@
 		<br>
 		<br>
 		<div>
-			<a class="btn-login" href="#">Editar Perfil</a> <input
+			<a class="btn-login" id="open" href="#">Editar Perfil</a> <input
 				class="btn-login" type="submit"
 				onclick="return confirm('Estas seguro de querer abandonar nuestra comunidad?')"
 				value="Eliminar cuenta" />
