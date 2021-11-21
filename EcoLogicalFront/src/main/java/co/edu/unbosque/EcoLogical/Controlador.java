@@ -51,6 +51,7 @@ public class Controlador extends HttpServlet {
 			     int respuesta=0; 
 			      try {
 				   respuesta = UsuarioJSON.postJSON(usuario);
+				   PrintWriter write = response.getWriter();//agrego linea
 				   if (respuesta==200) { 
 					   
 					   
@@ -63,7 +64,34 @@ public class Controlador extends HttpServlet {
 			     } catch (Exception e) {
 				 e.printStackTrace();
 			      }
-			}else if(accion.equals("Cargar")) {
+			}else if(accion.equals("Actualizar")) {
+				  
+			  	Usuarios usuario = new Usuarios();
+			  	usuario.set_id(request.getParameter("txtid"));
+			  	usuario.setNombre(request.getParameter("txtnombre"));
+			    usuario.setEmail(request.getParameter("txtemail"));
+			    usuario.setUsuario(request.getParameter("txtusuario"));
+			    usuario.setPassword(request.getParameter("txtpassword"));
+				
+		        int respuesta=0;
+		        
+		        try {
+				   respuesta = UsuarioJSON.putJSON(usuario, usuario.get_id());
+				
+				   PrintWriter write = response.getWriter();
+				   
+				   if (respuesta==200) {
+					   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar").forward(request, response);
+		        	   } else {
+					write.println("Error: " +  respuesta); 
+				   }
+					write.close(); 
+				   } catch (Exception e) {
+					e.printStackTrace();
+				   }
+
+
+				 }else if(accion.equals("Cargar")) {
 				 
 				String id= request.getParameter("id");
 				try {
@@ -77,9 +105,8 @@ public class Controlador extends HttpServlet {
 						System.out.println("Parametro2: " + id);
 						System.out.println("Parametro3: " + usuarios.getEmail());
 						request.setAttribute("usuarioSeleccionado", usuarios);
-					   
-					   
-						request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar").forward(request, response);	
+						request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar") .forward(request, response);
+					   	
 					}
 				  }
 				 } catch (Exception e) {
@@ -87,11 +114,29 @@ public class Controlador extends HttpServlet {
 				 	}
 
 				
-			}
+			}else if(accion.equals("Eliminar")) {
+						
+						String id= request.getParameter("id");			
+						int respuesta=0;
+						
+						try {
+						   respuesta = UsuarioJSON.deleteJSON(id);
+						   PrintWriter write = response.getWriter();
+						   if (respuesta==200) {
+							   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar").forward(request, response);
+						   } else {
+							write.println("Error: " +  respuesta);
+						   }
+						    write.close();
+						   } catch (Exception e) {
+							e.printStackTrace();
+						   }	
+					
+					}
 			     
 				
 			
-				request.getRequestDispatcher("/inicio.jsp").forward(request, response);
+				request.getRequestDispatcher("/Usuario.jsp").forward(request, response);
 			break;
 		}
 	}

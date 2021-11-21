@@ -21,6 +21,7 @@ pageEncoding="ISO-8859-1"%>
 						<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}">
 						
 					</div>
+					
 					<div class="form-group">
 						<label>Nombre:</label>
 						<input type="text" name="txtnombre" class="form-control" value="${usuarioSeleccionado.getNombre()}">
