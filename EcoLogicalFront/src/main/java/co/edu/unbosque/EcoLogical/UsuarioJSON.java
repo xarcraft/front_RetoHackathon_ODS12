@@ -34,6 +34,8 @@ public class UsuarioJSON {
 			usuario.setEmail(innerObj.get("email").toString()); 
 			usuario.setUsuario(innerObj.get("usuario").toString());
 			usuario.setPassword(innerObj.get("password").toString());
+			usuario.setBiografia(innerObj.get("biografia").toString());
+			usuario.setPuntos(Long.parseLong(innerObj.get("puntos").toString()));
 			lista.add(usuario);
 		}
 		return lista; 
@@ -91,6 +93,8 @@ public class UsuarioJSON {
 				+"\",\"email\": \""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()
 				+"\",\"password\":\""+usuario.getPassword()
+				+"\",\"biografia\":\""+usuario.getBiografia()
+				+"\",\"puntos\":\""+usuario.getPuntos()
 				+ "\"}";
 		byte[] out = data.getBytes(StandardCharsets.UTF_8); 
 		OutputStream stream = http.getOutputStream();
@@ -128,6 +132,8 @@ public class UsuarioJSON {
 				+"\",\"email\": \""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()
 				+"\",\"password\":\""+usuario.getPassword()
+				+"\",\"biografia\":\""+usuario.getBiografia()
+				+"\",\"puntos\":\""+usuario.getPuntos()
 				+ "\"}";
 		
 		

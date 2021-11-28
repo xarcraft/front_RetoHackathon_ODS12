@@ -7,7 +7,8 @@ public class Usuarios {
 	private String email;
 	private String usuario;
 	private String password;
-	
+	private String biografia;
+	private Long puntos;
 	public String get_id() {
 		return _id;
 	}
@@ -38,6 +39,22 @@ public class Usuarios {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String getBiografia() {
+		return biografia;
+	}
+	public void setBiografia(String biografia) {
+		this.biografia = biografia;
+	}
+	public Long getPuntos() {
+		return puntos;
+	}
+	public void setPuntos(Long puntos) {
+		this.puntos = puntos;
+	}
+	
+	
+	
+	
 	
 	
 }

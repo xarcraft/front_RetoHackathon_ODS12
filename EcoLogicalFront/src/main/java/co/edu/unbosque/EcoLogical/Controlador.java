@@ -47,6 +47,14 @@ public class Controlador extends HttpServlet {
 			     usuario.setEmail(request.getParameter("txtemail"));
 			     usuario.setUsuario(request.getParameter("txtusuario"));
 			     usuario.setPassword(request.getParameter("txtpassword"));
+			     usuario.setBiografia(request.getParameter("txtbio"));
+			     usuario.setPuntos(Long.parseLong(request.getParameter("txtpuntos")));
+			     System.out.println(usuario.getNombre());
+			     System.out.println(usuario.getEmail());
+			     System.out.println(usuario.getUsuario());
+			     System.out.println(usuario.getPassword());
+			     System.out.println(usuario.getBiografia());
+			     System.out.println(usuario.getPuntos());
 			     
 			     int respuesta=0; 
 			      try {
@@ -72,6 +80,8 @@ public class Controlador extends HttpServlet {
 			    usuario.setEmail(request.getParameter("txtemail"));
 			    usuario.setUsuario(request.getParameter("txtusuario"));
 			    usuario.setPassword(request.getParameter("txtpassword"));
+			    usuario.setBiografia(request.getParameter("txtbio"));
+			    usuario.setPuntos(Long.parseLong(request.getParameter("txtpuntos")));
 				
 		        int respuesta=0;
 		        

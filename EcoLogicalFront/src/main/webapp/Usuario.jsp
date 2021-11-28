@@ -38,6 +38,15 @@ pageEncoding="ISO-8859-1"%>
 								<label>Password:</label>
 								<input type="password" name="txtpassword" class="form-control" value="${usuarioSeleccionado.getPassword()}">
 							</div>
+							<div class="form-group">
+								<label>Bio:</label>
+								<input type="text" name="txtbio" class="form-control" value="${usuarioSeleccionado.getBiografia()}">
+							</div>
+							<div class="form-group">
+								<label>EcoLogicalCoins</label>
+								<input type="text" name="txtpuntos" class="form-control" value="${usuarioSeleccionado.getPuntos()}" readonly="readonly">
+							</div>
+							
 								<input type="submit" class="btn btn-primary" name="accion" value="Agregar">
 								<input type="submit" class="btn btn-success" name="accion" value="Actualizar">
 				</form>
@@ -51,6 +60,8 @@ pageEncoding="ISO-8859-1"%>
 						<th scope="col">Email</th>
 						<th scope="col">Usuario</th>
 						<th scope="col">Password</th>
+						<th scope="col">Biografia</th>
+						<th scope="col">EcoLogical Coins</th>
 					</tr>
 				</thead>
 			<tbody>
@@ -60,6 +71,8 @@ pageEncoding="ISO-8859-1"%>
 						<td>${lista.getEmail()}</td>
 						<td>${lista.getUsuario()}</td>
 						<td>${lista.getPassword()}</td>
+						<td>${lista.getBiografia()}</td>
+						<td>${lista.getPuntos()}</td>
 						<td>
 							<a class="btn btn-warning" href="Controlador?menu=Usuarios&accion=Cargar&id=${lista.getNombre()}">
 							Editar

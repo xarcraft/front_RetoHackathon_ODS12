@@ -151,11 +151,25 @@
 							<label for="recipient-name" class="col-form-label">Contraseña:</label>
 							<input type="password" class="form-control" id="recipient-name"
 								name="txtpassword" value="${usuarioSeleccionado.getPassword()}"
-								minlength="4" maxlength="14" required> <br><br><input
+								minlength="4" maxlength="14" required>
+						<div class="mb-3">
+							<label for="recipient-name" class="col-form-label">Biografia:</label>
+							<input type="text" class="form-control" id="recipient-name"
+								name="txtbio" value="${usuarioSeleccionado.getBiografia()}"
+								minlength="4" maxlength="14" required>
+						</div>
+						<div class="mb-3">
+							<label for="recipient-name" class="col-form-label">Puntos:</label>
+							<input type="text" class="form-control" id="recipient-name"
+								name="txtpuntos" value="${usuarioSeleccionado.getPuntos()}"
+								minlength="4" maxlength="14" required>
+						</div>
+						 <br><br><input
 								type="submit" class="btn btn-primary" name="accion"
 								value="Registrar">
 							<button type="button" class="btn btn-secondary"
 								data-bs-dismiss="modal">Cancelar</button>
+								
 						</div>
 					</form>
 				</div>
