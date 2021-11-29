@@ -33,7 +33,7 @@
 
 <!-- Masthead-->
     <header class="masthead">
-    <a class="btn botonEco btn-lg" href="index.jsp" role="button">Volver</a>
+    <a class="btn botonEco btn-lg" href="inicio.jsp" role="button">Volver</a>
     <a class="btn botonEco btn-lg" href="reciclar.jsp" role="button" style="float: right;">Siguiente R</a>
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
