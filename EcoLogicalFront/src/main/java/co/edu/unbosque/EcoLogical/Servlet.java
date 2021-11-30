@@ -39,8 +39,9 @@ private static final long serialVersionUID = 1L;
 		}
 			
 		if (respuesta==0) {
-		
-			request.getRequestDispatcher("/reducir.jsp").forward(request, response);
+			String message = "Credenciales incorrectas por favor verifique o registrese es gratis";
+			request.setAttribute("message", message);
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 			System.out.println("No se encontraron datos");  
 		}
 			

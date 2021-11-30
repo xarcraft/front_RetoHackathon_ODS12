@@ -38,6 +38,8 @@
 <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
+
+<p style="color: #caf0f8; text-align: center; font-size: 20px;">${message}</p>
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3"
 		id="mainNav">
