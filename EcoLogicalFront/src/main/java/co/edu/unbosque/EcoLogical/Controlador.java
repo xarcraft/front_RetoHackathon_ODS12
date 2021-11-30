@@ -43,6 +43,7 @@ public class Controlador extends HttpServlet {
 								
 			}else if(accion.equals("Registrar")) { 
 			     Usuarios usuario = new Usuarios();
+			     usuario.setCedula(request.getParameter("txtcedula"));
 			     usuario.setNombre(request.getParameter("txtnombre"));
 			     usuario.setEmail(request.getParameter("txtemail"));
 			     usuario.setUsuario(request.getParameter("txtusuario"));
@@ -76,6 +77,7 @@ public class Controlador extends HttpServlet {
 				  
 			  	Usuarios usuario = new Usuarios();
 			  	usuario.set_id(request.getParameter("txtid"));
+			  	usuario.setCedula(request.getParameter("txtcedula"));
 			  	usuario.setNombre(request.getParameter("txtnombre"));
 			    usuario.setEmail(request.getParameter("txtemail"));
 			    usuario.setUsuario(request.getParameter("txtusuario"));
@@ -113,7 +115,7 @@ public class Controlador extends HttpServlet {
 					if (usuarios.getNombre().equals(id)) {
 					
 						System.out.println("Parametro2: " + id);
-						System.out.println("Parametro3: " + usuarios.getEmail());
+						System.out.println("Parametro3: " + usuarios.getCedula());
 						request.setAttribute("usuarioSeleccionado", usuarios);
 						request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar") .forward(request, response);
 					   	

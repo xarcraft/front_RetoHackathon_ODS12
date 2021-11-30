@@ -21,7 +21,10 @@ pageEncoding="ISO-8859-1"%>
 						<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}">
 						
 					</div>
-					
+					<div class="form-group">
+						<label>Cedula:</label>
+						<input type="text" name="txtcedula" class="form-control" value="${usuarioSeleccionado.getCedula()}">
+					</div>
 					<div class="form-group">
 						<label>Nombre:</label>
 						<input type="text" name="txtnombre" class="form-control" value="${usuarioSeleccionado.getNombre()}">
@@ -56,6 +59,7 @@ pageEncoding="ISO-8859-1"%>
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>
+						<th scope="col">Cedula</th>
 						<th scope="col">Nombre</th>
 						<th scope="col">Email</th>
 						<th scope="col">Usuario</th>
@@ -67,6 +71,7 @@ pageEncoding="ISO-8859-1"%>
 			<tbody>
 				<c:forEach var="lista" items="${listaUsuarios}">
 					<tr>
+						<td>${lista.getCedula()}</td>
 						<td>${lista.getNombre()}</td>
 						<td>${lista.getEmail()}</td>
 						<td>${lista.getUsuario()}</td>

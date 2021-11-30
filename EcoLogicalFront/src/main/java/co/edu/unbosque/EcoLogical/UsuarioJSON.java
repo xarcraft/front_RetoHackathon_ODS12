@@ -30,6 +30,7 @@ public class UsuarioJSON {
 		JSONObject innerObj = (JSONObject) i.next();  
 			Usuarios usuario = new Usuarios();
 			usuario.set_id(innerObj.get("_id").toString());
+			usuario.setCedula(innerObj.get("cedula").toString());
 			usuario.setNombre(innerObj.get("nombre").toString());
 			usuario.setEmail(innerObj.get("email").toString()); 
 			usuario.setUsuario(innerObj.get("usuario").toString());
@@ -89,7 +90,8 @@ public class UsuarioJSON {
 		
 		
 		String data = "{" 
-				+"\"nombre\": \""+usuario.getNombre()
+				+"\"cedula\": \""+usuario.getCedula()
+				+"\",\"nombre\": \""+usuario.getNombre()
 				+"\",\"email\": \""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()
 				+"\",\"password\":\""+usuario.getPassword()
@@ -128,6 +130,7 @@ public class UsuarioJSON {
 		
 		String data = "{"
 				+ "\"_id\":\""+ id
+				+"\",\"cedula\": \""+usuario.getCedula()
 				+"\",\"nombre\": \""+usuario.getNombre()
 				+"\",\"email\": \""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()

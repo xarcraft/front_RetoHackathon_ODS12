@@ -127,11 +127,14 @@
 				<div class="modal-body">
 					<form method="get" action="Controlador">
 						<div class="mb-3">
-							<input type="hidden" name="menu" value="Usuarios"> <input
-								type="hidden" name="txtid"
-								value="${usuarioSeleccionado.get_id()}"> <label
-								for="message-text" class="col-form-label">Nombre:</label> <input
-								type="text" class="form-control" id="recipient-name"
+							<input type="hidden" name="menu" value="Usuarios"> 
+							<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}"> 
+							<label>Cedula:</label>
+							<input type="text" name="txtcedula" class="form-control"
+								value="${usuarioSeleccionado.getCedula_usuario()}" minlength="4" maxlength="14" required>
+								
+								<label for="message-text" class="col-form-label">Nombre:</label> 
+								<input 	type="text" class="form-control" id="recipient-name"
 								name="txtnombre" value="${usuarioSeleccionado.getNombre()}"
 								minlength="4" maxlength="30" required>
 						</div>
