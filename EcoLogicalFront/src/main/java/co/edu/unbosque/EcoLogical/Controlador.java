@@ -16,15 +16,16 @@ import co.edu.unbosque.EcoLogical.Usuarios;
 
 @WebServlet("/Controlador")
 public class Controlador extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-    
+	private static final long serialVersionUID = 1L;   
+	
+	
     public Controlador() {
         super();
        
-    }
-
-	
+    } 
+    
+    Usuarios usuarios = new Usuarios();
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String menu=request.getParameter("menu");		
@@ -32,16 +33,9 @@ public class Controlador extends HttpServlet {
 		
 		switch (menu) {
 		case "Usuarios":
-			if (accion.equals("Listar")) {
-				try {
-					ArrayList<Usuarios> lista = UsuarioJSON.getJSON();
-					request.setAttribute("listaUsuarios", lista);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
 			
-								
-			}else if(accion.equals("Registrar")) { 
+			
+		 if(accion.equals("Registrar")) { 
 			     Usuarios usuario = new Usuarios();
 			     usuario.setCedula(request.getParameter("txtcedula"));
 			     usuario.setNombre(request.getParameter("txtnombre"));
@@ -64,7 +58,7 @@ public class Controlador extends HttpServlet {
 				   if (respuesta==200) { 
 					   
 					   
-					   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar").forward(request, response);
+					   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=default").forward(request, response);
 					   System.out.println("Se registró correctamente, Bienvenid@: " +  usuario);
 					   	
 			        } else {
@@ -93,7 +87,7 @@ public class Controlador extends HttpServlet {
 				   PrintWriter write = response.getWriter();
 				   
 				   if (respuesta==200) {
-					   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar").forward(request, response);
+					   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=default").forward(request, response);
 		        	   } else {
 					write.println("Error: " +  respuesta); 
 				   }
@@ -104,7 +98,7 @@ public class Controlador extends HttpServlet {
 
 
 				 }else if(accion.equals("Cargar")) {
-				 
+					
 				String id= request.getParameter("id");
 				try {
 					
@@ -117,7 +111,7 @@ public class Controlador extends HttpServlet {
 						System.out.println("Parametro2: " + id);
 						System.out.println("Parametro3: " + usuarios.getCedula());
 						request.setAttribute("usuarioSeleccionado", usuarios);
-						request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar") .forward(request, response);
+						request.getRequestDispatcher("Controlador?menu=Usuarios&accion=default") .forward(request, response);
 					   	
 					}
 				  }
@@ -135,21 +129,20 @@ public class Controlador extends HttpServlet {
 						   respuesta = UsuarioJSON.deleteJSON(id);
 						   PrintWriter write = response.getWriter();
 						   if (respuesta==200) {
-							   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=Listar").forward(request, response);
+							   request.getRequestDispatcher("Controlador?menu=Usuarios&accion=default").forward(request, response);
 						   } else {
 							write.println("Error: " +  respuesta);
 						   }
 						    write.close();
 						   } catch (Exception e) {
 							e.printStackTrace();
-						   }	
-					
-					}
-			     
+						   }
+					}    
 				
-			
-				request.getRequestDispatcher("/Usuario.jsp").forward(request, response);
+				request.getRequestDispatcher("/perfil.jsp").forward(request, response);
 			break;
+			
+		
 		}
 	}
 	

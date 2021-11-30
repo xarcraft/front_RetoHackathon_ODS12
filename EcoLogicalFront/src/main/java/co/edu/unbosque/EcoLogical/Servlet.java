@@ -30,8 +30,9 @@ private static final long serialVersionUID = 1L;
 			
 			if (usuario.getUsuario().equals(usua) && usuario.getPassword().equals(pass)) {
 			
-			    request.setAttribute("usuario", usuario); 
-			    request.getRequestDispatcher("/inicio.jsp").forward(request, response); 
+			    request.setAttribute("usuarioSeleccionado", usuario); 
+			    System.out.println("Esto Imprime:" + lista);
+			    request.getRequestDispatcher("/perfil.jsp").forward(request, response); 
 			    respuesta =1; 
 			}
 					
@@ -48,8 +49,6 @@ private static final long serialVersionUID = 1L;
 		e.printStackTrace();
 	}
     }
-
-
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -57,9 +56,9 @@ private static final long serialVersionUID = 1L;
 		
 		
 	      if (accion.equals("Ingresar")) { 
-		    this.validarUsuarios(request, response);	
-		}
-
+		    this.validarUsuarios(request, response);			   
+		}      
+	     
 	}
 
 	

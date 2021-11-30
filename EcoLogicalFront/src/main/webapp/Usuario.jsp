@@ -47,7 +47,7 @@ pageEncoding="ISO-8859-1"%>
 							</div>
 							<div class="form-group">
 								<label>EcoLogicalCoins</label>
-								<input type="text" name="txtpuntos" class="form-control" value="${usuarioSeleccionado.getPuntos()}" readonly="readonly">
+								<input type="text" name="txtpuntos" class="form-control" value="${usuarioSeleccionado.getPuntos()}">
 							</div>
 							
 								<input type="submit" class="btn btn-primary" name="accion" value="Agregar">

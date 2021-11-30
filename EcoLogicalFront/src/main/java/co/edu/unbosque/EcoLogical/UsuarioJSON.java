@@ -38,6 +38,7 @@ public class UsuarioJSON {
 			usuario.setBiografia(innerObj.get("biografia").toString());
 			usuario.setPuntos(Long.parseLong(innerObj.get("puntos").toString()));
 			lista.add(usuario);
+			
 		}
 		return lista; 
 	}
@@ -90,9 +91,9 @@ public class UsuarioJSON {
 		
 		
 		String data = "{" 
-				+"\"cedula\": \""+usuario.getCedula()
-				+"\",\"nombre\": \""+usuario.getNombre()
-				+"\",\"email\": \""+usuario.getEmail()
+				+"\"cedula\":\""+usuario.getCedula()
+				+"\",\"nombre\":\""+usuario.getNombre()
+				+"\",\"email\":\""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()
 				+"\",\"password\":\""+usuario.getPassword()
 				+"\",\"biografia\":\""+usuario.getBiografia()
@@ -130,9 +131,9 @@ public class UsuarioJSON {
 		
 		String data = "{"
 				+ "\"_id\":\""+ id
-				+"\",\"cedula\": \""+usuario.getCedula()
-				+"\",\"nombre\": \""+usuario.getNombre()
-				+"\",\"email\": \""+usuario.getEmail()
+				+"\",\"cedula\":\""+usuario.getCedula()
+				+"\",\"nombre\":\""+usuario.getNombre()
+				+"\",\"email\":\""+usuario.getEmail()
 				+"\",\"usuario\":\""+usuario.getUsuario()
 				+"\",\"password\":\""+usuario.getPassword()
 				+"\",\"biografia\":\""+usuario.getBiografia()
