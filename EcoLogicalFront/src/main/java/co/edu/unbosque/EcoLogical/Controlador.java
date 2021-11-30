@@ -71,7 +71,7 @@ public class Controlador extends HttpServlet {
 				  
 			  	Usuarios usuario = new Usuarios();
 			  	usuario.set_id(request.getParameter("txtid"));
-			  	usuario.setCedula(request.getParameter("txtcedula"));
+			  	usuario.setCedula(request.getParameter("txtCedula"));
 			  	usuario.setNombre(request.getParameter("txtnombre"));
 			    usuario.setEmail(request.getParameter("txtemail"));
 			    usuario.setUsuario(request.getParameter("txtusuario"));
@@ -94,6 +94,7 @@ public class Controlador extends HttpServlet {
 					write.close(); 
 				   } catch (Exception e) {
 					e.printStackTrace();
+					System.out.println("Error: " +  respuesta); 
 				   }
 
 

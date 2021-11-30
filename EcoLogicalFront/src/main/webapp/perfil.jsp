@@ -76,8 +76,8 @@
 						<input type="text" name="txtemail" class="form-control" value="${usuarioSeleccionado.getEmail()}"> 
 					</div>
 					<div class="form-group">
-						<label>Usuario:</label>
-						<input type="text" name="txtusuario" class="form-control" value="${usuarioSeleccionado.getUsuario()}">
+						
+						<input type="hidden" name="txtusuario" class="form-control" value="${usuarioSeleccionado.getUsuario()}">
 					</div>
 					<div class="form-group">
 						<label>Password:</label>
@@ -88,14 +88,11 @@
 						<input type="textarea" name="txtbio" class="form-control" value="${usuarioSeleccionado.getBiografia()}">
 					</div>	
 					<div class="form-group">
-						<label>Puntos:</label>
+						
 						<input type="hidden" name="txtpuntos" class="form-control" value="${usuarioSeleccionado.getPuntos()}">
-					</div>					
+					</div>
+					<input type="submit" class="btn btn-success" name="accion" value="Actualizar">					
 		</form>
-      </div>
-      <div class="modal-footer">      	
-	        
-		<input type="submit" class="btn btn-success" name="accion" value="Actualizar">
       </div>
     </div>
   </div>
