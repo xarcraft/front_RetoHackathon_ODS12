@@ -131,8 +131,8 @@ public class Controlador extends HttpServlet {
 					respuesta = UsuarioJSON.deleteJSON(id);
 					PrintWriter write = response.getWriter();
 					if (respuesta == 200) {
-						request.getRequestDispatcher("Controlador?menu=Usuarios&accion=default").forward(request,
-								response);
+						request.getRequestDispatcher("/index.jsp").forward(request, response);
+						System.out.println("Se actualizo correctamente,");
 					} else {
 						write.println("Error: " + respuesta);
 					}

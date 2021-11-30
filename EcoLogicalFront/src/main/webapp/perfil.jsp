@@ -34,7 +34,7 @@
 		<br> <br>
 		<h3>Puntaje:</h3>
 
-		<h4 style="text-align: center;color: green;font-weight: bold;">${usuarioSeleccionado.getPuntos()}</h4>
+		<h4 style="text-align: center; color: green; font-weight: bold;">${usuarioSeleccionado.getPuntos()}</h4>
 
 		<br>
 
@@ -43,9 +43,9 @@
 			<a class="btn-login" id="open"
 				href="Controlador?menu=Usuarios&accion=Cargar&id=${usuarioSeleccionado.getNombre()}"
 				data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
-				Perfil</a> <input class="btn-login" type="submit"
-				onclick="return confirm('Estas seguro de querer abandonar nuestra comunidad?')"
-				value="Eliminar cuenta" />
+				Perfil</a> <a class="btn-login"
+				href="Controlador?menu=Usuarios&accion=Eliminar&id=${usuarioSeleccionado.get_id()}">Eliminar
+				Perfil</a>
 		</div>
 		<br> <br>
 	</section>
@@ -60,7 +60,7 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form class="form-sign" method="get" action="./Servlet">
+					<form class="form-sign" method="get" action="Controlador">
 						<div class="form-group">
 							<input type="hidden" name="menu" value="Usuarios"> <input
 								type="hidden" name="txtid"
@@ -107,8 +107,7 @@
 	<!-- *************************** Modal Retos ***************************************** -->
 	<div class="modal fade" id="exampleModal1" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div
-			class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-dialog modal-dialog-centered modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Retos</h5>
