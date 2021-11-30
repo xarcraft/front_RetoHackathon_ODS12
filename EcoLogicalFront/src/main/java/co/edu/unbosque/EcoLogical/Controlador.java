@@ -23,6 +23,20 @@ public class Controlador extends HttpServlet {
 	}
 
 	Usuarios usuarios = new Usuarios();
+	
+	public void buscarCodigoReto(String id, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	try {
+			ArrayList<Retos> listaretos= RetoJSON.getJSON();
+			for(Retos retosb:listaretos) {
+				if(retosb.getCodigo_reto().equals(id)) {//si encuentra el codigo del reto devuelve la info de ese reto específico
+					request.setAttribute("retoSeleccionado", retosb);//los datos que devuelve con la info del reto se almacenan en la variable retoseleccionado y la info sale de retosb
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+    }
+
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
@@ -31,6 +45,20 @@ public class Controlador extends HttpServlet {
 		String accion = request.getParameter("accion");
 
 		switch (menu) {
+		
+		case "Retos":
+			if (accion.equals("Listar")) {
+				try {
+					ArrayList<Retos> lista = RetoJSON.getJSON();
+					request.setAttribute("listaRetos", lista);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+			}
+				
+				
+			
 		case "Usuarios":
 
 			if (accion.equals("Registrar")) {

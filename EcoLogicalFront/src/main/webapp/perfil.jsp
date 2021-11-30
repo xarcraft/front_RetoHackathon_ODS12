@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,11 +26,12 @@
 		<h1>${usuarioSeleccionado.getNombre()}</h1>
 		<h2>EcoLogical Premium</h2>
 		<div>
-			<a class="btn-login" href="#" data-bs-toggle="modal"
-				data-bs-target="#exampleModal1">Retos</a>
+			<a class="btn-login" href="Controlador?menu=Retos&accion=Listar&id=${retoSeleccionado.getCodigo_reto()}" data-bs-toggle="modal"
+				data-bs-target="#exampleModal1" >Retos</a>
 		</div>
 		<br>
 		<p style="text-align: center;">${usuarioSeleccionado.getBiografia()}</p>
+		
 		<br> <br>
 		<h3>Puntaje:</h3>
 
@@ -40,9 +41,7 @@
 
 
 		<div>
-			<a class="btn-login" id="open"
-				href="Controlador?menu=Usuarios&accion=Cargar&id=${usuarioSeleccionado.getNombre()}"
-				data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
+			<a class="btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
 				Perfil</a> <a class="btn-login"
 				href="Controlador?menu=Usuarios&accion=Eliminar&id=${usuarioSeleccionado.get_id()}">Eliminar
 				Perfil</a>
@@ -116,36 +115,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="row">
-						<!-- Seccion 1 
-						<div class="card col-md-5">
-							<div class="card-body">
-								<h4 class="card-title">Retos</h4>
-								<h6>En este panel podras gestionar los retos disponibles</h6>
-								<div>
-									<form method="#" action="#">
-
-										<div class="form-group">
-											<input type="hidden" name="#" value=""> <input
-												type="hidden" name="#" value=""> <label>Nombre:</label>
-											<input type="text" name="txtnombre" class="form-control"
-												value="">
-										</div>
-										<div class="form-group">
-											<label>Descripcion:</label> <input type="text"
-												name="txtdescripcion" class="form-control" value="">
-										</div>
-										<div class="form-group">
-											<label>Puntos:</label> <input type="Number" name="txtpuntos"
-												class="form-control" value="" required>
-										</div>
-										<input type="submit" class="btn btn-primary mt-2"
-											name="accion" value="Agregar"> <input type="submit"
-											class="btn btn-success mt-2" name="accion" value="Actualizar">
-									</form>
-								</div>
-							</div>
-						</div> -->
-						<!-- Seccion 2 -->
+						
 						<div class="lista col-md-11">
 							<table class="table">
 								<thead class="thead-dark">
@@ -156,14 +126,18 @@
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach var="lista" items="#">
+										<c:forEach var="lista" items="${listaretos}">
 										<tr>
-											<td></td>
-											<td></td>
-											<td></td>
-											<td><a class="btn btn-danger m-2" href="#">Realizado</a></td>
-										</tr>
-									</c:forEach>
+							<td>${lista.getNombre_reto()}</td>
+							<td>${lista.getDescripcion_reto()}</td>
+							<td>${lista.getPuntos_reto()}</td>
+							<td>
+								<a>
+									Eliminar
+								</a>
+							</td>
+						</tr>
+							</c:forEach>
 								</tbody>
 							</table>
 						</div>
