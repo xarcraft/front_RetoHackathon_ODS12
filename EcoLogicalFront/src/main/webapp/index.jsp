@@ -128,50 +128,50 @@
 					<form method="get" action="Controlador">
 						<div class="mb-3">
 							<input type="hidden" name="menu" value="Usuarios"> 
-							<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}"> 
+							<input type="hidden" name="txtid" value=""> 
 							<label>Cedula:</label>
 							<input type="text" name="txtcedula" class="form-control"
-								value="${usuarioSeleccionado.getCedula_usuario()}" minlength="4" maxlength="14" required>
+								value="" minlength="4" maxlength="14" required>
 								
 								<label for="message-text" class="col-form-label">Nombre:</label> 
 								<input 	type="text" class="form-control" id="recipient-name"
-								name="txtnombre" value="${usuarioSeleccionado.getNombre()}"
+								name="txtnombre" value=""
 								minlength="4" maxlength="30" required>
 						</div>
 						<div class="mb-3">
 							<label for="recipient-name" class="col-form-label">Email:</label>
 							<input type="email" class="form-control" id="recipient-name"
-								name="txtemail" value="${usuarioSeleccionado.getEmail()}"
+								name="txtemail" value=""
 								required>
 						</div>
 						<div class="mb-3">
 							<label for="recipient-name" class="col-form-label">Usuario:</label>
 							<input type="text" class="form-control" id="recipient-name"
-								name="txtusuario" value="${usuarioSeleccionado.getUsuario()}"
+								name="txtusuario" value=""
 								minlength="4" maxlength="14" required>
 						</div>
 						<div class="mb-3">
 							<label for="recipient-name" class="col-form-label">Contraseña:</label>
-							<input type="password" class="form-control" id="recipient-name"
-								name="txtpassword" value="${usuarioSeleccionado.getPassword()}"
+							<input type="text" class="form-control" id="recipient-name"
+								name="txtpassword" value=""
 								minlength="4" maxlength="14" required>
 						<div class="mb-3">
-							<label for="recipient-name" class="col-form-label">Biografia:</label>
+							<label for="recipient-name" class="col-form-label">Como te describes a ti mismo:</label>
 							<input type="text" class="form-control" id="recipient-name"
-								name="txtbio" value="${usuarioSeleccionado.getBiografia()}"
+								name="txtbio" value=""
 								minlength="4" maxlength="14" required>
 						</div>
 						<div class="mb-3">
-							<label for="recipient-name" class="col-form-label">Puntos:</label>
-							<input type="text" class="form-control" id="recipient-name"
-								name="txtpuntos" value="${usuarioSeleccionado.getPuntos()}"
+							<!-- <label for="recipient-name" class="col-form-label">Puntos:</label>  -->
+							<input type="hidden" class="form-control" id="recipient-name"
+								name="txtpuntos" value="0"
 								minlength="4" maxlength="14" required>
 						</div>
 						 <br><br><input
 								type="submit" class="btn btn-primary" name="accion"
 								value="Registrar">
 							<button type="button" class="btn btn-secondary"
-								data-bs-dismiss="modal">Cancelar</button>
+								data-bs-dismiss="modal" >Cancelar</button>
 								
 						</div>
 					</form>

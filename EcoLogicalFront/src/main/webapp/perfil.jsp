@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,162 +23,157 @@
 <body>
 	<section class="box">
 		<img src="assets/img/user.png" width="180" alt="" class="box-img">
-		<h1>usuario 1</h1>
+		<h1>${usuarioSeleccionado.getNombre()}</h1>
 		<h2>EcoLogical Premium</h2>
 		<div>
-			<a class="btn-login" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal1">Retos</a> 
+			<a class="btn-login" href="#" data-bs-toggle="modal"
+				data-bs-target="#exampleModal1">Retos</a>
 		</div>
 		<br>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ut
-			hic consequuntur quo qui culpa veritatis, blanditiis corrupti
-			perspiciatis illo a laudantium illum sunt deleniti, nihil doloremque!
-			Obcaecati, at, cupiditate.</p>
+		<p style="text-align: center;">${usuarioSeleccionado.getBiografia()}</p>
+		<br> <br>
+		<h3>Puntaje:</h3>
+
+		<h4 style="text-align: center;color: green;font-weight: bold;">${usuarioSeleccionado.getPuntos()}</h4>
+
 		<br>
-		<br>
-		<h3>Insignias obtenidas</h3>
-		<ul>
-			<li><a href="#"><i class="fa fa-battery-full"
-					aria-hidden="true"></i></a></li>
-			<li><a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a></li>
-			<li><a href="#"><i class="fa fa-tint" aria-hidden="true"></i></i></a></li>
-			<li><a href="#"><i class="fa fa-recycle" aria-hidden="true"></i></a></li>
-		</ul>
-		<br>
-		
-		
+
+
 		<div>
-			<a class="btn-login" id="open"  href="Controlador?menu=Usuarios&accion=Cargar&id=${usuarioSeleccionado.getNombre()}" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar Perfil</a> 
-			<input	class="btn-login" type="submit"
+			<a class="btn-login" id="open"
+				href="Controlador?menu=Usuarios&accion=Cargar&id=${usuarioSeleccionado.getNombre()}"
+				data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
+				Perfil</a> <input class="btn-login" type="submit"
 				onclick="return confirm('Estas seguro de querer abandonar nuestra comunidad?')"
-				value="Eliminar cuenta"/>
+				value="Eliminar cuenta" />
 		</div>
-		<br>
-		<br>
+		<br> <br>
 	</section>
 	<!-- ********************Modal Editar Perfil *************************************** -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  		<div class="modal-dialog modal-dialog-centered">
-    		<div class="modal-content">
-      			<div class="modal-header">
-        		<h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
-        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      		</div>
-      <div class="modal-body">
-        <form class="form-sign" method="get" action="./Servlet">
-					<div class="form-group">
-						<input type="hidden" name="menu" value="Usuarios">
-						<input type="hidden" name="txtid" value="${usuarioSeleccionado.get_id()}">
-							
-                        <label>Cedula:</label>
-						<input type="text" name="txtCedula" class="form-control" value="${usuarioSeleccionado.getCedula()}">				
-					</div>
-					<div class="form-group">
-						<label>Nombre:</label>
-						<input type="text" name="txtnombre" class="form-control" value="${usuarioSeleccionado.getNombre()}">
-					</div>
-					<div class="form-group">
-						<label>Email:</label>
-						<input type="text" name="txtemail" class="form-control" value="${usuarioSeleccionado.getEmail()}"> 
-					</div>
-					<div class="form-group">
-						
-						<input type="hidden" name="txtusuario" class="form-control" value="${usuarioSeleccionado.getUsuario()}">
-					</div>
-					<div class="form-group">
-						<label>Password:</label>
-						<input type="password" name="txtpassword" class="form-control" value="${usuarioSeleccionado.getPassword()}">
-					</div>
-					<div class="form-group">
-						<label>Biografia:</label>
-						<input name="txtbio" class="form-control"  id="message-text" value="${usuarioSeleccionado.getBiografia()}">
-					</div>	
-					<div class="form-group">
-						
-						<input type="hidden" name="txtpuntos" class="form-control" value="${usuarioSeleccionado.getPuntos()}">
-					</div>
-					<input type="submit" class="btn btn-success mt-2" name="accion" value="Actualizar">					
-		</form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ********************************************************************************* -->
+	<div class="modal fade" id="exampleModal" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="form-sign" method="get" action="./Servlet">
+						<div class="form-group">
+							<input type="hidden" name="menu" value="Usuarios"> <input
+								type="hidden" name="txtid"
+								value="${usuarioSeleccionado.get_id()}"> <label>Cedula:</label>
+							<input type="text" name="txtCedula" class="form-control"
+								value="${usuarioSeleccionado.getCedula()}">
+						</div>
+						<div class="form-group">
+							<label>Nombre:</label> <input type="text" name="txtnombre"
+								class="form-control" value="${usuarioSeleccionado.getNombre()}">
+						</div>
+						<div class="form-group">
+							<label>Email:</label> <input type="text" name="txtemail"
+								class="form-control" value="${usuarioSeleccionado.getEmail()}">
+						</div>
+						<div class="form-group">
 
-<!-- *************************** Modal Retos ***************************************** -->
-<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  		<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
-    		<div class="modal-content">
-      			<div class="modal-header">
-        		<h5 class="modal-title" id="exampleModalLabel">Retos</h5>
-        		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      		</div>
-      <div class="modal-body">
-        <div class="row">
-		<!-- Seccion 1 -->
-		<div class="card col-md-5">
-			<div class="card-body">
-				<h4 class="card-title">Retos</h4>
-				<h6>En este panel podras
-					gestionar los retos disponibles</h6>
-				<div>
-					<form method="#" action="#">
-						
-						<div class="form-group">
-							<input type="hidden" name="#" value=""> 
-							<input type="hidden" name="#" value=""> 
-							<label>Nombre:</label>
-							<input type="text" name="txtnombre" class="form-control"
-								value="">
+							<input type="hidden" name="txtusuario" class="form-control"
+								value="${usuarioSeleccionado.getUsuario()}">
 						</div>
 						<div class="form-group">
-							<label>Descripcion:</label> 
-							<input type="text" name="txtdescripcion"	class="form-control" 
-								value="">
+							<label>Password:</label> <input type="text" name="txtpassword"
+								class="form-control"
+								value="${usuarioSeleccionado.getPassword()}">
 						</div>
 						<div class="form-group">
-							<label>Puntos:</label> 
-							<input type="Number" name="txtpuntos" class="form-control"
-								value="" required>
+							<label>Biografia:</label> <input name="txtbio"
+								class="form-control" id="message-text"
+								value="${usuarioSeleccionado.getBiografia()}">
 						</div>
-						<input type="submit" class="btn btn-primary mt-2" name="accion" value="Agregar"> 
-						<input type="submit" class="btn btn-success mt-2" name="accion" value="Actualizar">
+						<div class="form-group">
+							<input type="hidden" name="txtpuntos" class="form-control"
+								value="${usuarioSeleccionado.getPuntos()}">
+						</div>
+						<input type="submit" class="btn btn-success mt-2" name="accion"
+							value="Actualizar">
 					</form>
 				</div>
 			</div>
 		</div>
-		<!-- Seccion 2 -->
-		<div class="lista col-md-6">
-			<table class="table">
-				<thead class="thead-dark">
-					<tr>
-						<th scope="col">Nombre</th>
-						<th scope="col">Descripcion</th>
-						<th scope="col">Puntos</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach var="lista" items="#">
-						<tr>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td></td>
-							<td>
-								<a class="btn btn-warning m-2" href="#">Editar</a> 
-								<a class="btn btn-danger m-2" href="#">Eliminar</a>
-							</td>
-						</tr>
-					</c:forEach>
-				</tbody>
-			</table>
+	</div>
+	<!-- ********************************************************************************* -->
+
+	<!-- *************************** Modal Retos ***************************************** -->
+	<div class="modal fade" id="exampleModal1" tabindex="-1"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div
+			class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Retos</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<!-- Seccion 1 
+						<div class="card col-md-5">
+							<div class="card-body">
+								<h4 class="card-title">Retos</h4>
+								<h6>En este panel podras gestionar los retos disponibles</h6>
+								<div>
+									<form method="#" action="#">
+
+										<div class="form-group">
+											<input type="hidden" name="#" value=""> <input
+												type="hidden" name="#" value=""> <label>Nombre:</label>
+											<input type="text" name="txtnombre" class="form-control"
+												value="">
+										</div>
+										<div class="form-group">
+											<label>Descripcion:</label> <input type="text"
+												name="txtdescripcion" class="form-control" value="">
+										</div>
+										<div class="form-group">
+											<label>Puntos:</label> <input type="Number" name="txtpuntos"
+												class="form-control" value="" required>
+										</div>
+										<input type="submit" class="btn btn-primary mt-2"
+											name="accion" value="Agregar"> <input type="submit"
+											class="btn btn-success mt-2" name="accion" value="Actualizar">
+									</form>
+								</div>
+							</div>
+						</div> -->
+						<!-- Seccion 2 -->
+						<div class="lista col-md-6">
+							<table class="table">
+								<thead class="thead-dark">
+									<tr>
+										<th scope="col">Nombre</th>
+										<th scope="col">Descripcion</th>
+										<th scope="col">Puntos</th>
+									</tr>
+								</thead>
+								<tbody>
+									<c:forEach var="lista" items="#">
+										<tr>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td><a class="btn btn-danger m-2" href="#">Realizado</a></td>
+										</tr>
+									</c:forEach>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- ********************************************************************************* -->
+	<!-- ********************************************************************************* -->
 	<!-- Bootstrap core JS-->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -193,7 +188,7 @@
 	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-	
+
 
 </body>
 

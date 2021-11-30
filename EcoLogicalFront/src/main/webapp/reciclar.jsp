@@ -46,7 +46,7 @@
 
 	<!-- Masthead-->
 	<header class="masthead">
-		<a class="btn botonEco btn-lg" href="inicio.jsp" role="button">Volver</a>
+		<a class="btn botonEco btn-lg" href="index.jsp" role="button">Volver</a>
 		<a class="btn botonEco btn-lg" href="recuperar.jsp" role="button"
 			style="float: right;">Siguiente R</a>
 		<div class="container px-4 px-lg-5 h-100">
