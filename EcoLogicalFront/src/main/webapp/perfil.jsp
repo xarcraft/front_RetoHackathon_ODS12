@@ -108,7 +108,7 @@
 	<div class="modal fade" id="exampleModal1" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div
-			class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl">
+			class="modal-dialog modal-dialog-centered modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="exampleModalLabel">Retos</h5>
@@ -147,7 +147,7 @@
 							</div>
 						</div> -->
 						<!-- Seccion 2 -->
-						<div class="lista col-md-6">
+						<div class="lista col-md-11">
 							<table class="table">
 								<thead class="thead-dark">
 									<tr>
