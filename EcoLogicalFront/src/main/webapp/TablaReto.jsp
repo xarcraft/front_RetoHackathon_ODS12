@@ -75,7 +75,7 @@ td {
 						<td>${lista.getNombre_reto()}</td>
 						<td>${lista.getDescripcion_reto()}</td>
 						<td>${lista.getPuntos_reto()}</td>
-						<td><img src="assets/img/badge.png" alt="" width="50px">
+						<td><img src="assets/img/check1.png" alt="" width="50px">
 					</tr>
 				</c:forEach>
 			</tbody>
