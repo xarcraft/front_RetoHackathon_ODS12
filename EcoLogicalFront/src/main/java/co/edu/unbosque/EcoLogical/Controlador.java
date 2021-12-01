@@ -41,27 +41,13 @@ public class Controlador extends HttpServlet {
 		}
 	}
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String menu = request.getParameter("menu");
 		String accion = request.getParameter("accion");
 
 		switch (menu) {
-
-		case "Retos":
-			if (accion.equals("Listar")) {
-
-				try {
-					ArrayList<Retos> lista = RetoJSON.getJSON();
-					request.setAttribute("listaRetos", lista);
-					request.getRequestDispatcher("TablaReto.jsp").forward(request, response);
-					System.out.println("imprima algo pues");
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-			}
 
 		case "Usuarios":
 
@@ -178,6 +164,29 @@ public class Controlador extends HttpServlet {
 			break;
 
 		}
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String menu = request.getParameter("menu");
+		String accion = request.getParameter("accion");
+
+		switch (menu) {
+
+		case "Retos":
+			if (accion.equals("Listar")) {
+
+				try {
+					ArrayList<Retos> lista = RetoJSON.getJSON();
+					request.setAttribute("listaRetos", lista);
+					request.getRequestDispatcher("TablaReto.jsp").forward(request, response);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+
+			}
+		}
+
 	}
 
 }
