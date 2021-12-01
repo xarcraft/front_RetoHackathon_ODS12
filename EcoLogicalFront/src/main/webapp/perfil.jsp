@@ -47,7 +47,7 @@
 		<div>
 			<a class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
 				Perfil</a> <a class="btn btn-primary btn-lg"
-				href="Controlador?menu=Usuarios&accion=Eliminar&id=${usuarioSeleccionado.get_id()}">Eliminar
+				href="Controlador?menu=Retos&accion=Eliminar&id=${usuarioSeleccionado.get_id()}">Eliminar
 				Perfil</a>
 		</div>
 		<br> <br>
@@ -63,7 +63,7 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form class="form-sign" method="get" action="Controlador">
+					<form class="form-sign" method="post" action="Controlador">
 						<div class="form-group">
 							<input type="hidden" name="menu" value="Usuarios"> <input
 								type="hidden" name="txtid"
@@ -111,50 +111,7 @@
 	<div class="m-4" style="height: 400px;">
 		<iframe style="height: 100%; width: 100%; border: none" name="fiveframe" src="TablaReto.jsp"></iframe>
 	</div>
-
-	<!-- *************************** Modal Retos ***************************************** -->
-	<!-- <div class="modal fade" id="exampleModal1" tabindex="-1"
-		aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Retos</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"
-						aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						
-						<div class="lista col-md-11">
-							<table class="table">
-								<thead class="thead-dark">
-									<tr>
-										<th scope="col">Nombre</th>
-										<th scope="col">Descripcion</th>
-										<th scope="col">Puntos</th>
-									</tr>
-								</thead>
-								<tbody>
-										<c:forEach var="lista" items="${listaretos}">
-										<tr>
-							<td>${lista.getNombre_reto()}</td>
-							<td>${lista.getDescripcion_reto()}</td>
-							<td>${lista.getPuntos_reto()}</td>
-							<td>
-								<a>
-									Eliminar
-								</a>
-							</td>
-						</tr>
-							</c:forEach>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>   -->
+	
 	<!-- ********************************************************************************* -->
 	<!-- Bootstrap core JS-->
 	<script

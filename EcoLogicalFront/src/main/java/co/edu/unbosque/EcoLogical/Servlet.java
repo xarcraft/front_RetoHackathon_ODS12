@@ -30,8 +30,7 @@ private static final long serialVersionUID = 1L;
 			
 			if (usuario.getUsuario().equals(usua) && usuario.getPassword().equals(pass)) {
 			
-			    request.setAttribute("usuarioSeleccionado", usuario); 
-			    System.out.println("Esto Imprime:" + lista);
+			    request.setAttribute("usuarioSeleccionado", usuario);
 			    request.getRequestDispatcher("/perfil.jsp").forward(request, response); 
 			    respuesta =1; 
 			}
@@ -42,7 +41,6 @@ private static final long serialVersionUID = 1L;
 			String message = "Credenciales incorrectas por favor verifique o registrese es gratis";
 			request.setAttribute("message", message);
 			request.getRequestDispatcher("/index.jsp").forward(request, response);
-			System.out.println("No se encontraron datos");  
 		}
 			
 	} catch (Exception e) {
@@ -65,7 +63,12 @@ private static final long serialVersionUID = 1L;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String accion = request.getParameter("accion");
+		
+		
+	      if (accion.equals("Ingresar")) { 
+		    this.validarUsuarios(request, response);			   
+		} 
 	}
 
 }
