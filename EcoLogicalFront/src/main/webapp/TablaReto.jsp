@@ -5,27 +5,81 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Tabla retos</title>
+<style type="text/css">
+body {
+	background-color: #007200;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+div.centerTable {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	border: 1px solid #999;
+	text-align: left;
+	border-collapse: collapse;
+	margin: 0 0 1em 0;
+	caption-side: top;
+}
+
+caption, td, th {
+	padding: 0.3em;
+}
+
+caption {
+	font-weight: bold;
+	font-style: italic;
+}
+
+th {
+	font-size: 25px;
+	color: black;
+	text-align: center;
+	border-bottom: 1px solid #999;
+	color: white;
+	font-weight: bold;
+	font-size: 36px;
+}
+
+td {
+	border-bottom: 1px solid #999;
+	width: 20%;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+}
+</style>
 </head>
 <body>
-	<table class="table">
-		<thead class="thead-dark">
-			<tr>
-				<th scope="col">Nombre</th>
-				<th scope="col">Descripcion</th>
-				<th scope="col">Puntos</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="lista" items="${listaRetos}">
+	<h1>Retos del mes</h1>
+	<div class="centerTable">
+		<table>
+			<thead>
 				<tr>
-					<td>${lista.getNombre_reto()}</td>
-					<td>${lista.getDescripcion_reto()}</td>
-					<td>${lista.getPuntos_reto()}</td>
-					<td><a class="btn btn-success" href="#"> Realizado</a>
+					<th scope="col">Nombre</th>
+					<th scope="col">Descripción</th>
+					<th scope="col">Puntos</th>
+					<th scope="col">Estado</th>
 				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+			</thead>
+			<tbody>
+				<c:forEach var="lista" items="${listaRetos}">
+					<tr>
+						<td>${lista.getNombre_reto()}</td>
+						<td>${lista.getDescripcion_reto()}</td>
+						<td>${lista.getPuntos_reto()}</td>
+						<td><img src="assets/img/badge.png" alt="" width="50px">
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
