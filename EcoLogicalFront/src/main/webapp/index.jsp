@@ -54,7 +54,7 @@ $( document ).ready(function() {
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                    	<a class="logo"> <img src="assets/EcoLogicalClar4.png" width="400">
+                    	<a class="logo"> <img src="assets/EcoLogicalOsc5.png" width="400">
 		</a>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
