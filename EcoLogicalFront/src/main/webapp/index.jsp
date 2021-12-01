@@ -139,7 +139,7 @@ $( document ).ready(function() {
 						</div>
 						<div class="mb-3">
 							<label for="recipient-name" class="col-form-label">Contraseña:</label>
-							<input type="text" class="form-control" id="recipient-name"
+							<input type="password" class="form-control" id="recipient-name"
 								name="txtpassword" required>
 							<p class="mt-4 fst-italic">
 								Si no tiene cuenta.. <a data-bs-toggle="modal"

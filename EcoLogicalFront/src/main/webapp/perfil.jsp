@@ -90,9 +90,9 @@
 								value="${usuarioSeleccionado.getPassword()}">
 						</div>
 						<div class="form-group">
-							<label>Biografia:</label> <input name="txtbio"
+							<label>Biografia:</label> <textarea name="txtbio"
 								class="form-control" id="message-text"
-								value="${usuarioSeleccionado.getBiografia()}">
+								value="${usuarioSeleccionado.getBiografia()}"></textarea>
 						</div>
 						<div class="form-group">
 							<input type="hidden" name="txtpuntos" class="form-control"
