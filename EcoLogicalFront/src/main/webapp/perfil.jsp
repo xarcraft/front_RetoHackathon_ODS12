@@ -26,8 +26,9 @@
 		<h1>${usuarioSeleccionado.getNombre()}</h1>
 		<h2>EcoLogical Premium</h2>
 		<div>
-			<a class="btn-login" href="Controlador?menu=Retos&accion=Listar&id=${retoSeleccionado.getCodigo_reto()}" data-bs-toggle="modal"
-				data-bs-target="#exampleModal1" >Retos</a>
+			<a
+				class="btn-login"
+				href="Controlador?menu=Retos&accion=Listar" target="fiveframe">Retos</a>
 		</div>
 		<br>
 		<p style="text-align: center;">${usuarioSeleccionado.getBiografia()}</p>
@@ -102,9 +103,14 @@
 		</div>
 	</div>
 	<!-- ********************************************************************************* -->
+	
+	
+	<div class="m-4" style="height: 400px;">
+		<iframe style="height: 100%; width: 100%; border: none" name="fiveframe" src="TablaReto.jsp"></iframe>
+	</div>
 
 	<!-- *************************** Modal Retos ***************************************** -->
-	<div class="modal fade" id="exampleModal1" tabindex="-1"
+	<!-- <div class="modal fade" id="exampleModal1" tabindex="-1"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-lg">
 			<div class="modal-content">
@@ -145,7 +151,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>   -->
 	<!-- ********************************************************************************* -->
 	<!-- Bootstrap core JS-->
 	<script
