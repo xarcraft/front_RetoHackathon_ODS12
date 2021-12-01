@@ -131,7 +131,7 @@ $( document ).ready(function() {
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form class="form-sign" method="get" action="./Servlet">
+					<form class="form-sign" method="post" action="./Servlet">
 						<div class="mb-3">
 							<label for="recipient-name" class="col-form-label">Usuario:</label>
 							<input type="text" class="form-control" id="recipient-name"
@@ -170,7 +170,7 @@ $( document ).ready(function() {
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form method="get" action="Controlador">
+					<form method="post" action="Controlador">
 						<div class="mb-3">
 							<input type="hidden" name="menu" value="Usuarios"> 
 							<input type="hidden" name="txtid" value=""> 

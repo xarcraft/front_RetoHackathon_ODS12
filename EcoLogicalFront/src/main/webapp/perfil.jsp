@@ -63,7 +63,7 @@
 						aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<form class="form-sign" method="get" action="Controlador">
+					<form class="form-sign" method="post" action="Controlador">
 						<div class="form-group">
 							<input type="hidden" name="menu" value="Usuarios"> <input
 								type="hidden" name="txtid"
