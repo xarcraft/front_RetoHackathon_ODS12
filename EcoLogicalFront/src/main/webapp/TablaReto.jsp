@@ -5,10 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <title>Tabla retos</title>
 <style type="text/css">
 body {
 	background-color: #007200;
+	font-family: sans-serif;
 }
 
 h1 {
@@ -55,6 +57,11 @@ td {
 	font-size: 18px;
 	color: white;
 }
+
+.modal-body {
+	background: #38B000;
+}
+
 </style>
 </head>
 <body>
@@ -75,11 +82,28 @@ td {
 						<td>${lista.getNombre_reto()}</td>
 						<td>${lista.getDescripcion_reto()}</td>
 						<td>${lista.getPuntos_reto()}</td>
-						<td><img src="assets/img/check1.png" alt="" width="50px">
+						<td><a class="btn btn-success m-2" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Sitio</a> 
+						<!-- <td><img src="assets/img/check1.png" width="50px"></td> -->
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
+	
+	<!-- Modal Mapa -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+      	<iframe src="https://www.google.com/maps/d/embed?mid=1T2uYjlzZdDVzcV-yeLmw1f38uYg_IHZo&ehbc=2E312F" width="470" height="280"></iframe>
+      </div>
+     
+    </div>
+  </div>
+</div>
+	
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>	
 </body>
 </html>

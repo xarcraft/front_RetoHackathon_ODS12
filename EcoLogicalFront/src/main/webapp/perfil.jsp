@@ -30,23 +30,23 @@
 		<h2>EcoLogical Premium</h2>
 		<div>
 			<a
-				class="btn-login"
+				class="btn btn-primary btn-lg"
 				href="Controlador?menu=Retos&accion=Listar" target="fiveframe">Retos</a>
 		</div>
 		<br>
 		<p style="text-align: center;">${usuarioSeleccionado.getBiografia()}</p>
 		
-		<br> <br>
+		<br>
 		<h3>Puntaje:</h3>
 
-		<h4 style="text-align: center; color: green; font-weight: bold;">${usuarioSeleccionado.getPuntos()}</h4>
+		<h4 style="text-align: center; color: green; font-weight: bold; font-size: 30px;">${usuarioSeleccionado.getPuntos()}</h4>
 
 		<br>
 
 
 		<div>
-			<a class="btn-login" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
-				Perfil</a> <a class="btn-login"
+			<a class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">Editar
+				Perfil</a> <a class="btn btn-primary btn-lg"
 				href="Controlador?menu=Usuarios&accion=Eliminar&id=${usuarioSeleccionado.get_id()}">Eliminar
 				Perfil</a>
 		</div>

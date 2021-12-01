@@ -202,9 +202,9 @@ $( document ).ready(function() {
 								minlength="4" maxlength="14" required>
 						<div class="mb-3">
 							<label for="recipient-name" class="col-form-label">Como te describes a ti mismo:</label>
-							<input type="text" class="form-control" id="recipient-name"
+							<textarea type="text" class="form-control" id="recipient-name"
 								name="txtbio" value=""
-								minlength="4" maxlength="14" required>
+								minlength="4" maxlength="50" required></textarea>
 						</div>
 						<div class="mb-3">
 							<!-- <label for="recipient-name" class="col-form-label">Puntos:</label>  -->
@@ -212,10 +212,10 @@ $( document ).ready(function() {
 								name="txtpuntos" value="0"
 								minlength="4" maxlength="14" required>
 						</div>
-						 <br><br><input
-								type="submit" class="btn btn-primary" name="accion"
+						<input
+								type="submit" class="btn btn-primary mt-2" name="accion"
 								value="Registrar">
-							<button type="button" class="btn btn-secondary"
+							<button type="button" class="btn btn-secondary mt-2"
 								data-bs-dismiss="modal" >Cancelar</button>
 								
 						</div>
