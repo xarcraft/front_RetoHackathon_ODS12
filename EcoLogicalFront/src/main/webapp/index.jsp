@@ -64,9 +64,9 @@ $( document ).ready(function() {
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user"></i></span>
                                    <p>ECOLOGICAL</p>
-                                   <p>Somos una organización que nos dedicamos a ser parte del Objetivo de Desarrollo Sostenible ODS, 
-                                   Producción y Consumo Responsables, enfocandonos en las Educación y conocimiento 
-                                   de la Cultura de las 4R.</p>
+                                   <p>Creamos esta aplicacion web buscando contribuir al objetivo mundial propuesto por la ONU: ODS12 Producción y consumo responsables-
+                                    4R del reciclaje: Reducir, Reutilizar, Reciclar y Recuperar. Aquí podrás aprender en qué consiste, pequeñas cosas que puedes hacer 
+                                    a diario para contribuir y RETOS CON PUNTOS QUE LUEGO SERÁN INCENTIVOS ECONÓMICOS </p>
                                 </div>
                             </div>
                             
