@@ -73,14 +73,14 @@
                         REGÍSTRATE para que recibas BONIFICACIONES POR RETOS que ayudan PLANETA
                         </p>
                       </p>
-                    <a class="btn btn-light btn-xl" href="index.jsp" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ACEPTO EL RETO
+                    <a class="btn btn-light btn-xl" href="index.jsp" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">ACEPTO EL RETO
 					</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

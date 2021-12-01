@@ -89,15 +89,15 @@
 						<i class="fa fa-recycle" aria-hidden="true"></i>
 					</p>
 					<p class="resaltado">REGÍSTRATE para que recibas BONIFICACIONES
-						POR RETOS que ayudan PLANETA</p>
-					<a class="btn btn-light btn-xl" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ACEPTO EL RETO
+						POR RETOS que ayudan al PLANETA</p>
+					<a class="btn btn-light btn-xl" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">ACEPTO EL RETO
 					</a>
 				</div>
 			</div>
 		</div>
 	</section>
 <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">

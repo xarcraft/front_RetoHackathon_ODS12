@@ -77,8 +77,9 @@
                     <p class="resaltado">
                         REGÍSTRATE para que recibas BONIFICACIONES POR RETOS que ayudan al PLANETA
                     </p>
-                    <a class="btn btn-light btn-xl" href="index.jsp" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ACEPTO EL RETO
-					</a>
+                    <div>
+                    <a class="btn btn-light btn-xl" data-bs-toggle="modal" data-bs-target="#staticBackdrop">ACEPTO EL RETO
+					</a></div>
                 </div>
             </div>
         </div>
@@ -118,7 +119,7 @@
     <div class="card-group">
 
         <div class="card">
-            <img src="assets/img/plastico.jpg" style="height: 600px;" class="card-img-top"
+            <img src="assets/img/plastico.jpg" style="height: 400px;" class="card-img-top"
                 alt="https://es.euronews.com/2021/07/03/entra-en-vigor-la-prohibicion-de-vender-plasticos-de-un-solo-uso-en-la-union-europea">
             <div class="card-body">
                 <h5 class="card-title">La Unión Europea acuerda prohibir los plásticos de un solo uso a partir del 2021
@@ -137,7 +138,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="assets/img/restriccion.jpeg" style="height: 600px;" class="card-img-top"
+            <img src="assets/img/restriccion.jpeg" style="height: 400px;" class="card-img-top"
                 alt="https://www.eltiempo.com/vida/medio-ambiente/este-el-primer-pais-de-latinoamerica-que-se-despide-de-las-bolsas-plasticas-525348">
             <div class="card-body">
                 <h5 class="card-title">Chile se despide totalmente de las bolsas plásticas desechables en los comercios
@@ -157,7 +158,7 @@
             </div>
         </div>
         <div class="card">
-            <img src="assets/img/consumo.jpg" style="height: 600px;" class="card-img-top"
+            <img src="assets/img/consumo.jpg" style="height: 400px;" class="card-img-top"
                 alt="https://www.larepublica.co/responsabilidad-social/el-uso-de-bolsas-plasticas-en-los-supermercados-colombianos-ha-bajado-65-en-tres-anos-2964072">
             <div class="card-body">
                 <h5 class="card-title">El uso de bolsas plásticas en los supermercados colombianos ha bajado 65% en tres
