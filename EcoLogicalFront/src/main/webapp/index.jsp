@@ -39,7 +39,7 @@
 </head>
 <body id="page-top">
 
-<p style="color: #caf0f8; text-align: center; font-size: 20px;">${message}</p>
+<!-- <label id="login_error" style="color: #caf0f8; text-align: center; font-size: 20px;">${message}</label> -->
 	<!-- Navigation-->
 	<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3"
 		id="mainNav">
@@ -110,6 +110,7 @@
 							class="btn btn-primary">
 						<button type="button" class="btn btn-secondary"
 							data-bs-dismiss="modal">Cerrar</button>
+						<label id="login_error" style="color: #caf0f8; text-align: center; font-size: 20px;">${message}</label>
 					</form>
 				</div>
 			</div>
@@ -318,6 +319,7 @@
 	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
 	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	<script src="js/validarlogin.js"></script>
 </body>
 
 </html>
