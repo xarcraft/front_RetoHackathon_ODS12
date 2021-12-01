@@ -56,7 +56,7 @@ $( document ).ready(function() {
                     <div class="modal-header">
                     	<a class="logo"> <img src="assets/EcoLogicalClar4.png" width="400">
 		</a>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="/examples/actions/confirmation.php" method="post">
