@@ -117,48 +117,7 @@ public class Controlador extends HttpServlet {
 					System.out.println("Error: " + respuesta);
 				}
 
-			} else if (accion.equals("Cargar")) {
-
-				String id = request.getParameter("id");
-				try {
-
-					ArrayList<Usuarios> lista1 = UsuarioJSON.getJSON();
-					System.out.println("Parametro: " + id);
-
-					for (Usuarios usuarios : lista1) {
-						if (usuarios.getNombre().equals(id)) {
-
-							System.out.println("Parametro2: " + id);
-							System.out.println("Parametro3: " + usuarios.getCedula());
-							request.setAttribute("usuarioSeleccionado", usuarios);
-							request.getRequestDispatcher("Controlador?menu=Usuarios&accion=default").forward(request,
-									response);
-
-						}
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-
-			} else if (accion.equals("Eliminar")) {
-
-				String id = request.getParameter("id");
-				int respuesta = 0;
-
-				try {
-					respuesta = UsuarioJSON.deleteJSON(id);
-					PrintWriter write = response.getWriter();
-					if (respuesta == 200) {
-						request.getRequestDispatcher("/index.jsp").forward(request, response);
-						System.out.println("Se actualizo correctamente,");
-					} else {
-						write.println("Error: " + respuesta);
-					}
-					write.close();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+			} 
 
 			request.getRequestDispatcher("/perfil.jsp").forward(request, response);
 			break;
@@ -184,6 +143,24 @@ public class Controlador extends HttpServlet {
 					e.printStackTrace();
 				}
 
+			}else if (accion.equals("Eliminar")) {
+
+				String id = request.getParameter("id");
+				int respuesta = 0;
+
+				try {
+					respuesta = UsuarioJSON.deleteJSON(id);
+					PrintWriter write = response.getWriter();
+					if (respuesta == 200) {
+						request.getRequestDispatcher("/index.jsp").forward(request, response);
+						System.out.println("Se elimino correctamente,");
+					} else {
+						write.println("Error: " + respuesta);
+					}
+					write.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
 		}
 
