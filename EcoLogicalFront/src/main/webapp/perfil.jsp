@@ -22,6 +22,9 @@
 
 <body>
 	<section class="box">
+		<div class="d-flex">
+			<a class="btn btn-primary" href="index.jsp">Cerrar Sesión</a>
+		</div>
 		<img src="assets/img/user.png" width="180" alt="" class="box-img">
 		<h1>${usuarioSeleccionado.getNombre()}</h1>
 		<h2>EcoLogical Premium</h2>
